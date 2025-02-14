@@ -16,6 +16,7 @@ C:\Study\PG-DAC MAR-24\.NET Framework\Practice\7 MicroServices\Mango\Mango.Web\o
 C:\Study\PG-DAC MAR-24\.NET Framework\Practice\7 MicroServices\Mango\Mango.Web\obj\Debug\net8.0\Mango.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Study\PG-DAC MAR-24\.NET Framework\Practice\7 MicroServices\Mango\Mango.Web\obj\Debug\net8.0\Mango.Web.RazorAssemblyInfo.cache
 C:\Study\PG-DAC MAR-24\.NET Framework\Practice\7 MicroServices\Mango\Mango.Web\obj\Debug\net8.0\Mango.Web.RazorAssemblyInfo.cs
+C:\Study\PG-DAC MAR-24\.NET Framework\Practice\7 MicroServices\Mango\Mango.Web\obj\Debug\net8.0\Mango.Web.sourcelink.json
 C:\Study\PG-DAC MAR-24\.NET Framework\Practice\7 MicroServices\Mango\Mango.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Study\PG-DAC MAR-24\.NET Framework\Practice\7 MicroServices\Mango\Mango.Web\obj\Debug\net8.0\scopedcss\bundle\Mango.Web.styles.css
 C:\Study\PG-DAC MAR-24\.NET Framework\Practice\7 MicroServices\Mango\Mango.Web\obj\Debug\net8.0\scopedcss\projectbundle\Mango.Web.bundle.scp.css

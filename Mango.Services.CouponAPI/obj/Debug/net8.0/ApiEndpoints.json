@@ -73,16 +73,16 @@
   },
   {
     "ContainingType": "Mango.Services.CouponAPI.Controllers.CouponAPIController",
-    "Method": "Delete",
-    "RelativePath": "api/coupon",
-    "HttpMethod": "DELETE",
+    "Method": "Get",
+    "RelativePath": "api/coupon/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -99,9 +99,9 @@
   },
   {
     "ContainingType": "Mango.Services.CouponAPI.Controllers.CouponAPIController",
-    "Method": "Get",
+    "Method": "Delete",
     "RelativePath": "api/coupon/{id}",
-    "HttpMethod": "GET",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

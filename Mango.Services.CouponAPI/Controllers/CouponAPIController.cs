@@ -48,6 +48,9 @@ namespace Mango.Services.CouponAPI.Controllers
 			{
 				Coupon coupon = _db.coupons.First(x => x.CouponId == id);
 				_response.Result = _mapper.Map<CouponDto>(coupon);
+				_response.isSuccess = true;
+				_response.Message = "success";
+
 			}
 			catch (Exception ex)
 			{
@@ -67,6 +70,8 @@ namespace Mango.Services.CouponAPI.Controllers
 			{
 				Coupon coupon = _db.coupons.First(x => x.CouponCode.ToLower() == code.ToLower());
 				_response.Result = _mapper.Map<CouponDto>(coupon);
+				_response.isSuccess = true;
+				_response.Message = "success";
 			}
 			catch (Exception ex)
 			{
@@ -87,6 +92,8 @@ namespace Mango.Services.CouponAPI.Controllers
 				_db.coupons.Add(obj);
 				_db.SaveChanges();
 				_response.Result = _mapper.Map<CouponDto>(obj);
+				_response.isSuccess = true;
+				_response.Message = "Success";
 
 
 			}
@@ -108,6 +115,8 @@ namespace Mango.Services.CouponAPI.Controllers
 				_db.coupons.Update(obj);
 				_db.SaveChanges();
 				_response.Result = _mapper.Map<CouponDto>(obj);
+				_response.isSuccess = true;
+				_response.Message = "success";
 
 
 			}
@@ -121,6 +130,7 @@ namespace Mango.Services.CouponAPI.Controllers
 		}
 
 		[HttpDelete]
+		[Route("{id:int}")]
 		public ResponseDto Delete(int id)
 		{
 			try
@@ -130,8 +140,8 @@ namespace Mango.Services.CouponAPI.Controllers
 				_db.SaveChanges();
 				_response.Result = _mapper.Map<CouponDto>(coupon);
 				_response.Message = "Data Deleted";
-
-
+				_response.isSuccess = true;
+				
 			}
 			catch (Exception ex)
 			{
