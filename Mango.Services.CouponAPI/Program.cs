@@ -1,11 +1,10 @@
-
 using AutoMapper;
-using Mango.Services.CouponAPI.DAL;
 using Microsoft.EntityFrameworkCore;
+using Mango.Services.CouponAPI.DAL;
 
 namespace Mango.Services.CouponAPI
 {
-    public class Program
+	public class Program
     {
         public static void Main(string[] args)
         {
