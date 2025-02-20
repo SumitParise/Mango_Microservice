@@ -1,5 +1,6 @@
 
 using Mango.Services.AuthAPI.DAL;
+using Mango.Services.AuthAPI.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +19,7 @@ namespace Mango.Services.AuthAPI
 				option.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection"));
 			});
 
-			builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
+			builder.Services.AddIdentity<ApplicationUsers,IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
 				.AddDefaultTokenProviders();
 
 			builder.Services.AddControllers();
@@ -42,8 +43,22 @@ namespace Mango.Services.AuthAPI
 
 
 			app.MapControllers();
-
+			ApplyMigration();
 			app.Run();
+
+			void ApplyMigration() 
+			{
+			using(var scope = app.Services.CreateScope())
+				{
+					var _db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+					if (_db.Database.GetPendingMigrations().Count() > 0)
+					{
+						_db.Database.Migrate();
+					}
+				}
+
+			}
 		}
 	}
 }

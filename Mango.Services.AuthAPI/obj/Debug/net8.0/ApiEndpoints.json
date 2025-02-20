@@ -1,23 +1,22 @@
 [
   {
-    "ContainingType": "Mango.Services.AuthAPI.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "Mango.Services.AuthAPI.Controllers.AuthApiController",
+    "Method": "Login",
+    "RelativePath": "api/auth/Login",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Mango.Services.AuthAPI.WeatherForecast, Mango.Services.AuthAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Mango.Services.AuthAPI.Controllers.AuthApiController",
+    "Method": "Register",
+    "RelativePath": "api/auth/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
