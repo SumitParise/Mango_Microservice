@@ -1,6 +1,8 @@
 
 using Mango.Services.AuthAPI.DAL;
 using Mango.Services.AuthAPI.Model;
+using Mango.Services.AuthAPI.Services;
+using Mango.Services.AuthAPI.Services.IService;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,6 +28,9 @@ namespace Mango.Services.AuthAPI
 
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+			builder.Services.AddScoped<IAuthService,AuthServicecs>();
+
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
 

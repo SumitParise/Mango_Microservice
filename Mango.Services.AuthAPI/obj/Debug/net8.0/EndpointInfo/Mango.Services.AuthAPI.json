@@ -5,11 +5,30 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/auth/Register": {
+    "/api/auth/register": {
       "post": {
         "tags": [
           "AuthApi"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationRequestDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -17,7 +36,7 @@
         }
       }
     },
-    "/api/auth/Login": {
+    "/api/auth/login": {
       "post": {
         "tags": [
           "AuthApi"
@@ -30,5 +49,30 @@
       }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "RegistrationRequestDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }
