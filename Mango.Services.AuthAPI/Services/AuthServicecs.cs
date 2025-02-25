@@ -21,14 +21,42 @@ namespace Mango.Services.AuthAPI.Services
 
 		public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
 		{
-			LoginRequestDto loginRequest = new()
+			
+				var user = _appDbContext.AppllicationUsers.FirstOrDefault(u=>u.UserName.ToLower() == loginRequestDto.UserName.ToLower());
+
+				bool isValid = await userManager.CheckPasswordAsync(user, loginRequestDto.Password);
+
+			if (user == null || isValid == false)
 			{
-				UserName = loginRequestDto.UserName,
-				Password = loginRequestDto.Password
+				return new LoginResponseDto()
+				{
+					User = null,
+					Token = ""
+				};
+			}
+
+			//if user found generate JWT token here
+
+			UserDto userDto = new()
+			{
+				ID = user.Id,
+				Name = user.name,
+				Email = user.Email,
+				PhoneNumber = user.PhoneNumber
 			};
 
-			return await Login(loginRequest);
+			LoginResponseDto loginResponseDto = new LoginResponseDto()
+			{
+				User = userDto,
+				Token = "done"
+			};
+
+
+			return loginResponseDto;
 		}
+			
+			
+		
 
 		public async Task<string> Register(RegistrationRequestDto registrationRequestDto)
 		{
