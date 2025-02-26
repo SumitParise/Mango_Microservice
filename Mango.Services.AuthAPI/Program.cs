@@ -21,7 +21,7 @@ namespace Mango.Services.AuthAPI
 				option.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection"));
 			});
 
-			builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("ApiSettings.JwtOptions"));
+			builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("ApiSettings:JwtOptions"));
 
 			builder.Services.AddIdentity<ApplicationUsers,IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
 				.AddDefaultTokenProviders();
@@ -30,10 +30,13 @@ namespace Mango.Services.AuthAPI
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 			builder.Services.AddScoped<IAuthService,AuthServicecs>();
-			
+			builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
+
+			Console.WriteLine("JWT Secret: " + builder.Configuration["ApiSettings:JwtOptions:Secret"]);
+
 
 			var app = builder.Build();
 
