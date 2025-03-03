@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Mango.Services.AuthAPI.Services
 {
-	public class AuthServicecs : IAuthService
+	public class AuthService : IAuthService
 	{
 		private readonly AppDbContext _appDbContext;
 		private readonly UserManager<ApplicationUsers> userManager;
 		private readonly RoleManager<IdentityRole> roleManager;
 		private readonly IJwtTokenGenerator _jwtTokenGenerator;
-		public AuthServicecs(AppDbContext appDbContext, IJwtTokenGenerator jwtTokenGenerator, UserManager<ApplicationUsers> userManager, RoleManager<IdentityRole> roleManager)
+		public AuthService(AppDbContext appDbContext, IJwtTokenGenerator jwtTokenGenerator, UserManager<ApplicationUsers> userManager, RoleManager<IdentityRole> roleManager)
 		{
 			_appDbContext = appDbContext;
 			_jwtTokenGenerator = jwtTokenGenerator;

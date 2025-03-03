@@ -29,7 +29,7 @@ namespace Mango.Services.AuthAPI
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-			builder.Services.AddScoped<IAuthService,AuthServicecs>();
+			builder.Services.AddScoped<IAuthService,AuthService>();
 			builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 
 			builder.Services.AddEndpointsApiExplorer();
