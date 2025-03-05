@@ -64,7 +64,7 @@ namespace Mango.Services.AuthAPI.Controllers
 		{
 			try
 			{
-				var AssignRole = await _authService.AssignRole(model.Email, model.RoleName);
+				var AssignRole = await _authService.AssignRole(model.Email, model.Role);
 				if (!AssignRole)
 				{
 					_responseDto.isSuccess = false;

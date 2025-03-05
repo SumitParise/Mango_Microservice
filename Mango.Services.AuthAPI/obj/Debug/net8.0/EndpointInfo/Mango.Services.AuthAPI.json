@@ -134,7 +134,7 @@
             "type": "string",
             "nullable": true
           },
-          "roleName": {
+          "role": {
             "type": "string",
             "nullable": true
           }
