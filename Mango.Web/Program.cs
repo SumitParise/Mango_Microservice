@@ -21,9 +21,11 @@ namespace Mango.Web
 			SD.CouponAPIBase = builder.Configuration["ServiceUrls:CouponAPI"];
 			SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPI"];
 
+			
 			builder.Services.AddScoped<IBaseService, BaseService>();
 			builder.Services.AddScoped<ICouponService,CouponService>();
 			builder.Services.AddScoped<IAuthService,AuthService>();
+			builder.Services.AddScoped<ITokenProvider, TokenProvider>();
 
 			var app = builder.Build();
 
