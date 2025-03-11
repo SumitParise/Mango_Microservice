@@ -1,10 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "nDaHBLOpq7Y=",
+  "dgSpecHash": "PSWo9kS70dc=",
   "success": true,
   "projectFilePath": "C:\\Study\\PG-DAC MAR-24\\.NET Framework\\Practice\\7 MicroServices\\Mango\\Mango.Web\\Mango.Web.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sumit\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Sumit\\.nuget\\packages\\microsoft.bcl.memory\\9.0.0\\microsoft.bcl.memory.9.0.0.nupkg.sha512",
+    "C:\\Users\\Sumit\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Sumit\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Sumit\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.6.1\\microsoft.identitymodel.abstractions.8.6.1.nupkg.sha512",
+    "C:\\Users\\Sumit\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.6.1\\microsoft.identitymodel.jsonwebtokens.8.6.1.nupkg.sha512",
+    "C:\\Users\\Sumit\\.nuget\\packages\\microsoft.identitymodel.logging\\8.6.1\\microsoft.identitymodel.logging.8.6.1.nupkg.sha512",
+    "C:\\Users\\Sumit\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.6.1\\microsoft.identitymodel.tokens.8.6.1.nupkg.sha512",
+    "C:\\Users\\Sumit\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Sumit\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.6.1\\system.identitymodel.tokens.jwt.8.6.1.nupkg.sha512"
   ],
   "logs": []
 }
